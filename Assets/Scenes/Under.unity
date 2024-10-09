@@ -321,10 +321,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2711750953669924475, guid: 9ab3f6568454ce041b65bf97f5c1e2a5, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: bddb06a2cee2319488b5f9730c565ed2, type: 2}
     - target: {fileID: 3465695291294053471, guid: 9ab3f6568454ce041b65bf97f5c1e2a5, type: 3}
       propertyPath: m_Name
       value: Landing Pad
@@ -386,14 +382,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8726611619173510815, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8726611619173510815, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -447,13 +435,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2711750953669924475, guid: 9ab3f6568454ce041b65bf97f5c1e2a5, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 34855a5398b90b644a68378bfc77c04f, type: 2}
     - target: {fileID: 3465695291294053471, guid: 9ab3f6568454ce041b65bf97f5c1e2a5, type: 3}
       propertyPath: m_Name
       value: Launch Pad
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465695291294053471, guid: 9ab3f6568454ce041b65bf97f5c1e2a5, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -600,10 +588,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3597670243743351643, guid: af616b30d5f09ff4a83c5384f7576f22, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 39f9bebcba8decc4c8752704fadb2809, type: 2}
     - target: {fileID: 7462746063426371845, guid: af616b30d5f09ff4a83c5384f7576f22, type: 3}
       propertyPath: m_Name
       value: Obstacle
@@ -619,8 +603,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1963952217}
   - {fileID: 345465253}
-  - {fileID: 1058984649}
+  - {fileID: 396945121}
   - {fileID: 1385906126}
   - {fileID: 1023212441}
-  - {fileID: 396945121}
   - {fileID: 7913990513496126250}
+  - {fileID: 1058984649}
