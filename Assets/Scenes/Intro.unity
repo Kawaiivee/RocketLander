@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9cf2fe9984bf67c4d841db3ba12b9fd1, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3142963676530351112, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 6.11
       objectReference: {fileID: 0}
     - target: {fileID: 3142963676530351112, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -386,8 +386,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5975147654298849814, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
+      propertyPath: CustomDataModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976102973255354086, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8032756652469761800, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
+    - {fileID: 5777818317370846824, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a454ad81a09af4843bd53b694c81e9d0, type: 3}

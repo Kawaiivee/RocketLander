@@ -3,8 +3,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // Parameters
-    [SerializeField] float upThrustSpeed = 600f;
+    [SerializeField] float upThrustSpeed = 2000f;
     [SerializeField] float rotationThrustSpeed = 200f;
+    [SerializeField] float drag = 1.0f;
     [SerializeField] AudioClip rocketBoostAudioClip;
 
     // Cache
@@ -18,7 +19,7 @@ public class Movement : MonoBehaviour
     {
         rocketRigidbody = GetComponent<Rigidbody>();
         rocketAudioSource = GetComponent<AudioSource>();
-        rocketRigidbody.drag = 0.5f;
+        rocketRigidbody.drag = drag;
     }
 
     void Update()

@@ -8,8 +8,13 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] float sequenceDelay = 2f;
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
+    [SerializeField] ParticleSystem successParticle;
+    [SerializeField] ParticleSystem crashParticle;
 
     AudioSource audioSource;
+
+    bool isTransitioning;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -17,6 +22,7 @@ public class CollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        if(isTransitioning) { return; }
         // should turn tags into enum
         var otherTag = other.gameObject.tag;
         switch(otherTag)
@@ -37,33 +43,19 @@ public class CollisionHandler : MonoBehaviour
 
     void StartSuccessSequence()
     {
-        StartCoroutine(StartSuccessSequenceCoroutine());
-    }
-
-    void StartCrashSequence()
-    {
-        StartCoroutine(StartCrashSequenceCoroutine());
-    }
-
-    IEnumerator StartSuccessSequenceCoroutine()
-    {
-        while (audioSource.isPlaying == true)
-        {
-            yield return null;
-        }
+        isTransitioning = true;
+        successParticle.Play();
         audioSource.PlayOneShot(success);
-        //GetComponent<Movement>().enabled = false;
+        GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", sequenceDelay);
     }
     
-    IEnumerator StartCrashSequenceCoroutine()
+    void StartCrashSequence()
     {
-        while (audioSource.isPlaying == true)
-        {
-            yield return null;
-        }
+        isTransitioning = true;
+        crashParticle.Play();
         audioSource.PlayOneShot(crash);
-        //GetComponent<Movement>().enabled = false;
+        GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", sequenceDelay);
     }
 
@@ -81,20 +73,5 @@ public class CollisionHandler : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadSceneAsync(currentSceneIndex);
-    }
-}
-
-public class DontDestroy : MonoBehaviour
-{
-    void Awake()
-    {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("Rocket");
-
-        if (objs.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
     }
 }
